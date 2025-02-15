@@ -239,7 +239,7 @@
 "max_zoom"          => 19,
 
 // Maximum duration of a single location share, in seconds.
-"max_duration"      => 86400,
+"max_duration"      => 9223372036854775807,
 
 // Minimum time between each location update, in seconds.
 "min_interval"      => 1,

@@ -18,6 +18,7 @@ if (!authenticated()) die($LANG['incorrect_password']."\n");
 $d = intval($_POST["dur"]);
 $i = floatval($_POST["int"]);
 $mod = isset($_POST["mod"]) ? intval($_POST["mod"]) : SHARE_MODE_CREATE_ALONE;
+if ($d == 0) $d = (PHP_INT_MAX - time());
 if ($d > getConfig("max_duration")) die($LANG['share_too_long']."\n");
 if ($i > getConfig("max_duration")) die($LANG['interval_too_long']."\n");
 if ($i < getConfig("min_interval")) die($LANG['interval_too_short']."\n");
